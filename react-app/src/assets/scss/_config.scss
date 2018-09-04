@@ -1,0 +1,40 @@
+$black: #010000;
+$white: #ffffff;
+$lightgrey: #e6e6e6e6;
+$darkgrey: #333;
+$red:#ff1755;
+
+@mixin translateY($e) {
+    -webkit-transform: translateY($e);
+       -moz-transform: translateY($e);
+            translate: translateY($e);
+   }
+   
+@mixin transition($e) {
+    -webkit-transition: $e;
+       -moz-transition: $e;
+            transition: $e;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: 18px;
+    color: $black;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    @include transition(.4s ease-in-out);
+    
+    &:hover{
+        color: $red;
+        @include transition(.4s ease-in-out);
+    }
+}
+
+.container-fluid {
+    line-height: 24px;
+}
