@@ -1,7 +1,7 @@
 @import "_config.scss";
 
 header {
-    position: relative;
+    position: sticky;
     display: block;
     width: 100%;
     background-color: $black;
@@ -36,11 +36,25 @@ header {
             }
 
             a{
-                font-size: 19px;
+                font-size: 1vw;
                 line-height: normal;
                 color: $white;
             }
         }
 
     }
+}
+
+.sidebar{
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    background-color: $darkgrey;
+}
+
+.main{
+    position: absolute;
+    width: 85%;
+    right: 0px;
+    display: block;
 }

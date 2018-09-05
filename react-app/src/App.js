@@ -4,6 +4,7 @@ import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import HomePage from './components/pages/homePage';
 import About from './components/pages/about';
+import SideBar from './components/sideBarComponent/sideBar';
 
 import {
   BrowserRouter as Router,
@@ -12,14 +13,18 @@ import {
 } from 'react-router-dom';
 
 
+
 class App extends Component {
   render() {
     return (
       <Router>
       <div className="App">
         <Header />
-          <Route exact path="/" component = {HomePage} />
-          <Route exact path="/About" component = {About} />
+          <div className="main">
+            <Route exact path="/" component = {HomePage} />
+            <Route exact path="/About" component = {About} />
+          </div>
+          <SideBar />
         <Footer />
       </div>
       </Router>
