@@ -6,7 +6,7 @@ import {
 class Header extends Component {
   render() {
     return (
-        <header>
+        <header className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div className="logo">
                 LOGO
             </div>
